@@ -157,31 +157,15 @@ npm run build
 - **Backend**: Laravel 10, PHP 8.1+
 - **Frontend**: Tailwind CSS, JavaScript
 - **Base de Datos**: MySQL
-- **Servidor Web**: Apache/Nginx
+- **Servidor Web**: Apache
 - **Herramientas**: Composer, npm
 
-## Contribución
 
-1. Fork el proyecto
-2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abrir un Pull Request
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## Soporte
-
-Para soporte técnico, contactar a:
-- Email: soporte@sistemacardiovascular.com
-- Teléfono: +52 777 123 4567
 
 ## Changelog
 
 ### v1.0.0
 - Implementación inicial del sistema
 - Autenticación con roles
-- Gestión básica de citas y tratamientos
+- Gestión básica de citas
 - Dashboard personalizado por rol
