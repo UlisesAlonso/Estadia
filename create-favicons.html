@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Favicons - Cardio Vida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .logo-preview {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .logo-preview img {
+            max-width: 200px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+        .instructions {
+            background: #e8f4fd;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .favicon-preview {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .favicon-item {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+        }
+        .favicon-item img {
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+        .code-block {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        .download-btn {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+        }
+        .download-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Generador de Favicons - Cardio Vida</h1>
+        
+        <div class="logo-preview">
+            <h3>Logo Actual:</h3>
+            <img src="images/logo.png" alt="Cardio Vida Logo" id="logoPreview">
+        </div>
+
+        <div class="instructions">
+            <h3>📋 Instrucciones para crear favicons:</h3>
+            <ol>
+                <li><strong>Descarga el logo actual</strong> haciendo clic en el botón de abajo</li>
+                <li><strong>Usa una herramienta online</strong> como <a href="https://favicon.io/favicon-converter/" target="_blank">favicon.io</a> o <a href="https://realfavicongenerator.net/" target="_blank">RealFaviconGenerator</a></li>
+                <li><strong>Sube tu logo</strong> y genera los favicons en diferentes tamaños</li>
+                <li><strong>Descarga los archivos</strong> y colócalos en la carpeta <code>public/</code></li>
+                <li><strong>Actualiza el layout</strong> con las etiquetas meta correspondientes</li>
+            </ol>
+        </div>
+
+        <div class="favicon-preview">
+            <div class="favicon-item">
+                <h4>16x16</h4>
+                <div style="width: 16px; height: 16px; background: #007bff; border: 1px solid #ccc; margin: 0 auto;"></div>
+                <small>favicon-16x16.png</small>
+            </div>
+            <div class="favicon-item">
+                <h4>32x32</h4>
+                <div style="width: 32px; height: 32px; background: #007bff; border: 1px solid #ccc; margin: 0 auto;"></div>
+                <small>favicon-32x32.png</small>
+            </div>
+            <div class="favicon-item">
+                <h4>48x48</h4>
+                <div style="width: 48px; height: 48px; background: #007bff; border: 1px solid #ccc; margin: 0 auto;"></div>
+                <small>favicon-48x48.png</small>
+            </div>
+            <div class="favicon-item">
+                <h4>192x192</h4>
+                <div style="width: 48px; height: 48px; background: #007bff; border: 1px solid #ccc; margin: 0 auto;"></div>
+                <small>android-chrome-192x192.png</small>
+            </div>
+            <div class="favicon-item">
+                <h4>512x512</h4>
+                <div style="width: 48px; height: 48px; background: #007bff; border: 1px solid #ccc; margin: 0 auto;"></div>
+                <small>android-chrome-512x512.png</small>
+            </div>
+        </div>
+
+        <div class="code-block">
+            <h4>📁 Archivos que necesitas crear:</h4>
+            <ul>
+                <li><code>public/favicon.ico</code> (16x16, 32x32, 48x48)</li>
+                <li><code>public/favicon-16x16.png</code></li>
+                <li><code>public/favicon-32x32.png</code></li>
+                <li><code>public/favicon-48x48.png</code></li>
+                <li><code>public/android-chrome-192x192.png</code></li>
+                <li><code>public/android-chrome-512x512.png</code></li>
+                <li><code>public/apple-touch-icon.png</code> (180x180)</li>
+                <li><code>public/site.webmanifest</code></li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="images/logo.png" download="cardio-vida-logo.png" class="download-btn">
+                📥 Descargar Logo Actual
+            </a>
+            <a href="https://favicon.io/favicon-converter/" target="_blank" class="download-btn">
+                🔧 Generar Favicons Online
+            </a>
+        </div>
+
+        <div class="code-block">
+            <h4>🔧 Código HTML para agregar al layout:</h4>
+            <pre><code>&lt;!-- Favicon para diferentes navegadores --&gt;
+&lt;link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"&gt;
+&lt;link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}"&gt;
+&lt;link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}"&gt;
+&lt;link rel="icon" type="image/png" sizes="48x48" href="{{ asset('favicon-48x48.png') }}"&gt;
+
+&lt;!-- Apple Touch Icon --&gt;
+&lt;link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}"&gt;
+
+&lt;!-- Android Chrome Icons --&gt;
+&lt;link rel="icon" type="image/png" sizes="192x192" href="{{ asset('android-chrome-192x192.png') }}"&gt;
+&lt;link rel="icon" type="image/png" sizes="512x512" href="{{ asset('android-chrome-512x512.png') }}"&gt;
+
+&lt;!-- Web App Manifest --&gt;
+&lt;link rel="manifest" href="{{ asset('site.webmanifest') }}"&gt;</code></pre>
+        </div>
+    </div>
+
+    <script>
+        // Verificar si el logo existe
+        const logoImg = document.getElementById('logoPreview');
+        logoImg.onerror = function() {
+            this.style.display = 'none';
+            this.parentNode.innerHTML = '<p style="color: red;">❌ No se encontró el logo. Asegúrate de que existe en public/images/logo.png</p>';
+        };
+    </script>
+</body>
+</html>
+
+
